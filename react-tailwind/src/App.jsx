@@ -1,13 +1,13 @@
-import ClickExample from "./assets/ClickExample";
+import InputExample from "./InputExample";
 
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="flex flex-col items-center max-w-4xl justify-center p-4">
+      <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center py-8">イベントハンドリングの例</h1>
 
-        <ClickExample />
+        <InputExample />
       </div>
     </div>
   );
