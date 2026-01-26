@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Tailwind CSS 基本練習</title>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-8">
+            Tailwind CSS 基本クラス練習
+        </h1>
+    </div>
+    <h2 class="text-2xl font-semibold mb-6 text-center">
+        テキスト関連クラス
+    </h2>
+    <div class="space-y-4 text-center">
+        <p class="text-sm text-gray-600">小さなテキスト text-sm</p>
+        <p class="text-base text-gray-800">基本サイズのテキスト text-base</p>
+        <p class="text-lg text-gray-900">少し大きなテキスト text-lg</p>
+        <p class="text-xl font-medium">大きなテキスト、中程度の太さ text-xl font-medium</p>
+        <p class="text-2xl font-bold text-blue-600">大見出し、太字、青色 text-2xl font-bold text-blue-600</p>
+    </div>
+    <section class="mb-12 mx-auto text-center max-w-4xl space-y-4">
+        <h2 class="text-2xl font-semibold mb-6 p-4">背景色とボーダー</h2>
+        <div class="grid grid-cols-1 md;grid-cols-3 gap-4">
+            <div class="bg-red-100 border-l-4 border-red-500 p-4">
+                <p class="text-red-800">赤系の背景とボーダー</p>
+            </div>
+            <div class="bg-green-100 border-l-4 border-green-500 p-4">
+                <p class="text-green-800">緑系の背景とボーダー</p>
+            </div>
+            <div class="bg-blue-100 border-l-4 border-blue-500 p-4">
+                <p class="text-blue-800">青系の背景とボーダー</p>
+            </div>
+        </div>
+    </section>
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-6">Flexboxレイアウト</h2>
+        <!--横並び基本-->
+        <div class="mb-6">
+            <h3 class="text-lg font-medium mb-3">基本的な横並び</h3>
+            <div class="flex space-x-8">
+                <div class="bg-blue-500 text-white p-4 rounded">アイテム１</div>
+                <div class="bg-green-500 text-white p-4 rounded">アイテム2</div>
+                <div class="bg-red-500 text-white p-4 rounded">アイテム3</div>
+            </div>
+        </div>
+
+        <!--中央よせ-->
+        <div class="mb-6">
+            <h3 class="text-lg font-medium mb-3">中央寄せ</h3>
+            <div class="flex justify-center items-center h-32 bg-gray-200 rounded space-x-8">
+                <div class="bg-purple-500 text-white p-4 rounded">中央に配置</div>
+                <div class="bg-purple-500 text-white p-4 rounded">中央に配置</div>
+            </div>
+        </div>
+
+        <!--両端よせ-->
+        <div class="mb-6">
+            <h3 class="text-lg font-medium mb-3">両端寄せ</h3>
+            <div class="flex justify-between items-center bg-gray-200 p-4 rounded">
+                <div class="bg-indigo-500 text-white p-3 rounded">左側</div>
+                <div class="bg-pink-500 text-white p-3 rounded">右側</div>
+            </div>
+        </div>
+    </section>
+    
+    <!--CSS Gridレイアウト-->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-6">CSS Gridレイアウト</h2>
+
+        <!--基本的なグリッド-->
+        <div class="mb-6">
+            <h3 class="text-lg font-medium mb-3">3列グリッド</h3>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-yellow-400 p-4 rounded text-center">1</div>
+                <div class="bg-yellow-400 p-4 rounded text-center">2</div>
+                <div class="bg-yellow-400 p-4 rounded text-center">3</div>
+                <div class="bg-yellow-400 p-4 rounded text-center">4</div>
+                <div class="bg-yellow-400 p-4 rounded text-center">5</div>
+                <div class="bg-yellow-400 p-4 rounded text-center">6</div>
+            </div>
+        </div>
+
+        <!--異なるサイズのグリッド-->
+        <div class="mb-6">
+            <h3 class="text-lg font-medium mb-3">カラムサイズが異なるグリッド</h3>
+            <div class="grid grid-cols-4 gap-4">
+                <div class="col-span-2 bg-teal-400 p-4 rounded text-center">幅２倍</div>
+                <div class="bg-teal-400 p-4 rounded text-center">通常</div>
+                <div class="bg-teal-400 p-4 rounded text-center">通常</div>
+            </div>
+        </div>
+    </section>
+
+    <!--カラーシステム-->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-6 text-center">カラーシステム</h2>
+
+        <div class="mb-6 text-center">
+            <h3 class="text-lg font-medium mb-3">グレースケール</h3>
+            <div class="flex space-x-2 justify-center">
+                <div class="w-12 h-12 bg-gray-100 rounded border"></div>
+                <div class="w-12 h-12 bg-gray-300 rounded border"></div>
+                <div class="w-12 h-12 bg-gray-500 rounded border"></div>
+                <div class="w-12 h-12 bg-gray-700 rounded border"></div>
+                <div class="w-12 h-12 bg-gray-900 rounded border"></div>
+            </div>
+            <h3 class="text-lg font-medium mb-3">ブルー系</h3>
+            <div class="flex space-x-2 justify-center">
+                <div class="w-12 h-12 bg-blue-100 rounded border"></div>
+                <div class="w-12 h-12 bg-blue-300 rounded border"></div>
+                <div class="w-12 h-12 bg-blue-500 rounded border"></div>
+                <div class="w-12 h-12 bg-blue-700 rounded border"></div>
+                <div class="w-12 h-12 bg-blue-900 rounded border"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-12">
+        <h2 class="text-2xl font-seminold mb-6">スペーシングシステム</h2>
+
+        <div class="mb-6">
+            <h3 class="text-lg font-medium mb-3">パディング</h3>
+            <div class="bg-gray-200 p-2">
+                <div class="bg-blue-400 p-1 mb-2">p-1 4px</div>
+                <div class="bg-blue-400 p-2 mb-2">p-2 8px</div>
+                <div class="bg-blue-400 p-4 mb-2">p-4 16px</div>
+                <div class="bg-blue-400 p-8 mb-2">p-8 32px</div>
+            </div>
+        </div>
+        <div class="mb-6">
+            <h3 class="text-lg font-medium mb-3">マージン</h3>
+            <div class="bg-gray-200 p-2">
+                <div class="bg-green-400 p-2 mb-2">mb-2 8px</div>
+                <div class="bg-green-400 p-2 mb-4">mb-4 16px</div>
+                <div class="bg-green-400 p-2 mb-8">mb-8 32px</div>
+                <div class="bg-green-400 p-2 ">最後の要素</div>
+            </div>
+        </div>
+    </section>
+
+    <!--レスポンシブデザイン-->
+    <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-6">レスポンシブデザイン</h2>
+
+        <div class="mb-6">
+            <h3 class="text-lg font-medium mb-3">レスポンシブグリッド</h3>
+            <p class="text-sm text-gray-600 mb-4">
+                画面サイズを変更して確認してください。
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-orange-400 p-4 rounded text-center text-white">アイテム1</div>
+                <div class="bg-orange-400 p-4 rounded text-center text-white">アイテム1</div>
+                <div class="bg-orange-400 p-4 rounded text-center text-white">アイテム1</div>
+                <div class="bg-orange-400 p-4 rounded text-center text-white">アイテム1</div>
+                <div class="bg-orange-400 p-4 rounded text-center text-white">アイテム1</div>
+                <div class="bg-orange-400 p-4 rounded text-center text-white">アイテム1</div>
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <h3 class="text-lg font-medium mb-3">レスポンシブテキスト</h3>
+            <p class="text-base md:text-lg lg:text-xl">
+                このテキストは画面サイズに応じてサイズが変わります
+            </p>
+        </div>
+    </section>
+</body>
+</html>
